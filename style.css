@@ -1,0 +1,146 @@
+body 
+{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header 
+{
+  background-color: black;
+  color : rgb(195, 195, 195);
+  padding: 20px;
+}
+
+nav ul 
+{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li 
+{
+  display: inline;
+  margin-right: 10px;
+
+}
+
+nav ul li a 
+{
+  text-decoration: none;
+  color: grey;
+  transition: color 0.4s ease-in 100ms
+}
+
+nav ul li a:hover
+{
+  color:white;
+}
+
+#banner 
+{
+  position: relative; /* Adăugăm această proprietate pentru a face stratul suprapus să fie poziționat relativ la acest element */
+  background-image: url('banner.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 200px 50px;
+  color: #d1d1d1;
+  position: relative;
+}
+
+#banner::before 
+{
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index:2;
+}
+
+#banner p 
+{
+  width:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2; 
+}
+
+#banner h2 
+{
+  width:50%;
+  font-size: 32px;
+  margin-bottom: 20px;
+  position:relative;
+  z-index:2;
+}
+
+#banner .cta-button 
+{
+  position: relative;
+  display: inline-block;
+  background-color: #4f0000;
+  color: #fffbfb;
+  padding: 10px 20px;
+  right: 25%;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+#products 
+{
+  text-align:center;
+  padding: 20px;
+}
+
+.product 
+{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.product img 
+{
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover
+{
+  transform: scale(1.1) rotate(5deg);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#banner .cta-button:hover
+{
+  background-color: #6d0101;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  #banner {
+    padding: 50px 20px;
+  }
+
+  #banner h2 {
+    font-size: 24px;
+  }
+
+  #banner p {
+    font-size: 16px;
+  }
+}
